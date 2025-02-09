@@ -12,7 +12,7 @@ export default function Contacto() {
     cell: "",
     message: "",
   });
-
+  
   const [isSubmitting, setIsSubmitting] = useState(false); // Para controlar el estado de envío
   const [submitted, setSubmitted] = useState(false); // Para controlar si el mensaje se ha enviado
 
@@ -54,17 +54,13 @@ export default function Contacto() {
         {/* Si se ha enviado el formulario, renderizar el mensaje de éxito */}
         {submitted ? (
           <div className="flex flex-col items-center justify-center text-center p-10">
-            <p className="text-3xl font-bold text-[#ffffff]">
-              ¡Mensaje enviado con éxito!
-            </p>
-            <p className="mt-4 text-lg">
-              Gracias por contactarme, pronto me comunicaré contigo.
-            </p>
+            <p className="text-3xl font-bold text-[#ffffff]">¡Mensaje enviado con éxito!</p>
+            <p className="mt-4 text-lg">Gracias por contactarme, pronto me comunicaré contigo.</p>
           </div>
         ) : (
           /* Si no se ha enviado el formulario, renderizar el formulario */
           <form
-            /* onSubmit={handleSubmit} */
+            onSubmit={handleSubmit}
             className="flex flex-col gap-3 text-[#000000] w-full lg:w-[600px] xl:w-[360px] [&>input]:rounded-[12px] [&>input]:text-xl [&>input]:h-12 [&>input]:p-4 [&>textarea]:h-52 [&>input]:placeholder-[#5d3427] [&>input]:text-[#5d3427] [&>textarea]:p-4 [&>textarea]:text-xl [&>textarea]:rounded-[12px] [&>textarea]:placeholder-[#5d3427] [&>textarea]:text-[#5d3427]"
           >
             <input
@@ -102,8 +98,7 @@ export default function Contacto() {
               disabled={isSubmitting} // Deshabilitar el botón cuando se esté enviando
               className="bg-[#5d3427] rounded-[12px] uppercase tracking-widest text-[#ffffff] xl:hover:bg-[#ffffff] xl:hover:text-[#5d3427] w-fit px-8 py-4 text-xl transition-colors ease-in-out duration-300"
             >
-              {isSubmitting ? "Enviando..." : "Enviar"}{" "}
-              {/* Cambiar el texto del botón */}
+              {isSubmitting ? "Enviando..." : "Enviar"} {/* Cambiar el texto del botón */}
             </button>
           </form>
         )}
