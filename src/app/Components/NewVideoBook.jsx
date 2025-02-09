@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import "photoswipe/style.css";
 import ContentSection from "./ContentSection";
-import Video from "./Video";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import Videos from "../data/Videobook";
 import {
   Carousel,
@@ -46,7 +47,14 @@ export default function NewVideoBook() {
                 key={title}
                 className={`${Basis} flex flex-col gap-3`}
               >
-                <Video Source={src} PosterImage={thumbnail} />
+                <LiteYouTubeEmbed
+                  id={src}
+                  title={title}
+                  wrapperClass="w-[415px] h-full aspect-[9/16] object-cover rounded-[12px] cursor-pointer"
+                  iframeClass="w-[415px] h-full object-cover"
+                  poster="maxresdefault"
+
+                />
                 <h3 className="max-w-[300px] m-auto text-xl text-center">
                   {title}
                 </h3>
