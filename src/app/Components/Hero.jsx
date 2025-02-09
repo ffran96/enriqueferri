@@ -15,7 +15,7 @@ export default function Hero() {
       <Image
         src={Wallpaper}
         alt="Enrique en una grabación de videoclip"
-        className="w-screen h-dvh object-cover object-center grayscale"
+        className="w-screen h-dvh object-cover object-center"
         quality={100}
         sizes="100vw"
         style={{
