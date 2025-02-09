@@ -2,7 +2,7 @@ import React from "react";
 import ContentSection from "./ContentSection";
 import Underline from "./Underline";
 import Image from "next/image";
-import ConocemeImage from "../../../public/Enrique en una grabación de videoclip.jpg";
+import ConocemeImage from "../../../public/Enrique camara en mano.png";
 import Title2 from "./Title2";
 
 export default function Conoceme() {
