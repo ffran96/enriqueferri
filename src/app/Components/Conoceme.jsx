@@ -2,7 +2,7 @@ import React from "react";
 import ContentSection from "./ContentSection";
 import Underline from "./Underline";
 import Image from "next/image";
-import ConocemeImage from "../../../public/Joss-coceme.jpg"
+import ConocemeImage from "../../../public/Enrique camara en mano.png"
 import Title2 from "./Title2";
 
 
@@ -38,7 +38,7 @@ export default function Conoceme() {
           </p>
         </div>
         <Image
-          alt="Conoce a Joss"
+          alt="Enrique camara en mano"
           loading="lazy"
           className="size-[350px] md:size-[600px] object-cover rounded-full "
           src={ConocemeImage}
